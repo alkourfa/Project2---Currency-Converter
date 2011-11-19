@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name>Project 2 ~ Currency Converter</display-name>
+    
+    <servlet>
+        <servlet-name>URLRedirect</servlet-name>
+        <servlet-class>URLRedirect</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getCode</servlet-name>
+        <servlet-class>getCode</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>currencyConverter</servlet-name>
+        <servlet-class>currencyConverter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>URLRedirect</servlet-name>
+        <url-pattern>/URLRedirect</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getCode</servlet-name>
+        <url-pattern>/getCode</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>currencyConverter</servlet-name>
+        <url-pattern>/currencyConverter</url-pattern>
+    </servlet-mapping>
+  
+<context-param>
+  <param-name>myLink</param-name>
+  <param-value>http://dl.dropbox.com/u/15863529/report.pdf</param-value>
+</context-param>
+
+<listener>
+  <listener-class>
+    URIListener
+  </listener-class>
+</listener>
+</web-app>
